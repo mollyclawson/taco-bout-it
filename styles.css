@@ -47,3 +47,6 @@ nav a:hover {
   color: #5ca4a9;
 }
 
+header{
+  position: fixed;
+}
