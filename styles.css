@@ -2,6 +2,7 @@ body {
   background-color: #e6ebe0;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  margin-top: 0px;
 }
 
 h1 a {
@@ -24,11 +25,14 @@ h2 {
   color: #f660ab;
   text-align: center;
   font-style: italic;
+  padding: 0px;
+  margin-top: 0px;
 }
 
 nav {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 115px;
   padding: 20px 0;
   background-color: #fff;
   position: fixed;
@@ -48,6 +52,11 @@ nav a:hover {
   color: #5ca4a9;
 }
 
-header{
+#header {
+  padding-top: 0;
+  margin-top: 0;
+  box-sizing:border-box;
+  background-color: #e6ebe0;
   position: fixed;
+  width: 100%
 }
