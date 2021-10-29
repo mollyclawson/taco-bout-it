@@ -4,7 +4,13 @@ body {
     "Lucida Sans", Arial, sans-serif;
   margin-top: 0px;
 }
-
+.title {
+  font-size: 30px;
+  color: #F660AB;
+  padding-top: 220px;
+  box-sizing: border-box;
+  margin-top: 0px;
+}
 h1 a {
   font-size: 56px;
   text-decoration: none;
