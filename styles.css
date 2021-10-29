@@ -31,6 +31,7 @@ nav {
   justify-content: space-evenly;
   padding: 20px 0;
   background-color: #fff;
+  position: fixed;
 }
 
 nav a {
@@ -46,6 +47,3 @@ nav a:hover {
   color: #5ca4a9;
 }
 
-header {
-  position: fixed;
-}
