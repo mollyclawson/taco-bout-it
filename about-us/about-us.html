@@ -4,6 +4,43 @@
         <meta charset="UTF-8">
         <title>Taco 'Bout It</title>
         <link rel="stylesheet" href="../styles.css">
+        <style type="text/css">
+
+            .story {
+                font-size: 16px;
+                line-height: 2;
+                max-width: 800px;
+                text-align: center;
+            }
+
+            .portrait{
+                height: 280px;
+                width: 280px;
+                box-sizing: border-box;
+                margin: 40px;
+            }
+
+            .owner {
+                display: flex;
+                justify-content: space-evenly;
+                
+            }
+
+            .owner p {
+                font-size: 20px;
+                width: 600px;
+                line-height: 2;
+                margin: 40px 0;
+            }
+
+
+            h3 {
+                font-size: 36px;
+                text-align: center;
+                color: #f660ab;
+            }
+
+        </style>
     </head>
     <body>
         <div id="header">
@@ -19,8 +56,46 @@
             <a href="../awards/awards.html">Awards</a>
         </nav>
 
-        <div id= "first">
-            About us page here
+        <div id= "first" style="padding-top: 190px">
+            <div>
+                <h2>Our Story</h2>
+                <div style="display: flex; justify-content: space-evenly">
+                    <p class="story">
+                        Our owners, Maria and Joe Rodriguez, started Taco 'Bout It back in spring of 
+                        1987- just seven months after they tied the knot. After graduating high school together, Maria 
+                        and Joe simply knew that it was their fate to make authentic, handmade Mexican cuisine
+                        for the locals of the greater Boston area, especially for the hungry college kids of 
+                        Somerville, Cambridge, and Boston. At just 21, Maria and Joe bought their first used truck 
+                        and started making their homemade-quality tacos. In 1995, they purchased a brick-and-mortar 
+                        unit to start a dine-in and delivery service in Medford. 
+                    </p>
+                </div>
+                <div class="owners">
+                    <h2>The Owners</h2>
+                    <h3>Maria</h3>
+                    <div class="owner">
+                        <img src="../images/maria.jpg" class="portrait">
+                        <p>
+                            Maria Rodriguez is the business-savvy brains behind Taco 'Bout It; she's been handling the finances
+                            of TBI since its beginnings. Mother to three teenage sons and loyal wife to Joe, she is 
+                            "the boss" in every sense of the word.
+                        </p>
+                    </div>
+                    <h3>Joe</h3>
+                    <div class="owner"> 
+                        <img src="../images/joe.jpg" class="portrait">
+                        <p>
+                            Joe Rodriguez is a chef at heart. When he first started TBI with his wife Maria, he 
+                            wasn't interested in making a large proft- but was really focued on making high-quality, 
+                            authentic, handmade tacos for the locals. He's constantly coming up with new, creative 
+                            recipes.
+                        </p>
+
+                    </div>
+                    
+                </div>
+                
+            </div>
         </div>
         
     </body>
