@@ -5,51 +5,50 @@
         <title>Taco 'Bout It</title>
         <link rel="stylesheet" href="styles.css">
         <style type="text/css">
-            .dining-img {
-                width: 60%;
-                margin-left: 20%;
-                margin-right: 20%;
-            }
-            .tacos-img {
-                width: 200px;
-                height: 200px;
-            }
-            .plate-img {
-                width: 100%;
-                height: 720px;
-                object-fit: cover;
-            }
             .image {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("images/plate-hires.jpg");
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("images/plate-hires.jpg");
                 width: 100%;
                 height: 700px;
                 background-repeat: no-repeat;
                 background-size: cover;
             }
-            section {
-                padding-top: 195px;
-            }
-
             .welcome {
-                font-size: 48px;
+                padding-top: 300px;
+                font-size: 64px;
             } 
-            
-            h2 .subtitle{
-                font-size: 36px; 
-                padding: 20px 0;
-                margin-top: 200px;
-            }
-
             h3 {
                 font-size: 24px;
                 font-style: none;
                 color: #5ca4a9;
                 width: 25%;
             }
+            table {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 100px;
+            }
+            tr {
+                display: flex;
+                justify-content: space-between;
+                width: 400px;
+                font-size: 18px;
+            }
+            
 
+            .subtitle{
+                font-size: 36px; 
+            }
             .sub-subtitle {
                 font-size: 36px;
                 color: #f660ab;
+                text-align: center;
+            }
+            .text {
+                font-size: 20px;
+                line-height: 2;
+                width: 80%;
+                margin-left: 10%;
+                margin-right: 10%;
                 text-align: center;
             }
 
@@ -70,20 +69,55 @@
             <a href="awards/awards.html">Awards</a>
         </nav>
 
-        <section>
+        <section style="padding-top:190px">
             <div class="image">
                 <h2 class="welcome">Welcome to Taco 'Bout It!</h2> 
                 <p class="sub-subtitle"> Mexican Kitchen | Taco Truck </p>
             </div>
             
-            <div>
-                <h2 class="subtite">Our Mission</h2>
+            <div style="margin-top:40px">
+                <h2 class="subtitle">Our Mission</h2>
                 <p class="text">Our mission is a simple one: to satisfy the hunger of of our customers with 
                     delicious, handmade tacos. We want to make sure that our tacos are available to everyone - so
                     we have vegan and vegetarian options, as well as accomidations for gluten-free and allergen-free 
                     customers. We have been operating in our hometown of Medford, MA since 1987- and hope to continue
                     to feed the hungry faces of Boston college students and residents. 
                 </p>
+            </div>
+            <div>
+                <h2 class="subtitle">Hours of Operation</h2>
+                <table>
+                    <tr>
+                        <th>Sunday</th>
+                        <th>11:00am - 8:00pm</th>
+                    </tr>
+                    <tr>
+                        <th>Monday</th>
+                        <th>Closed</th>
+                    </tr>
+                    <tr>
+                        <th>Tuesday</th>
+                        <th>11:00am - 8:00pm</th>
+                    </tr>
+                    <tr>
+                        <th>Wednesday</th>
+                        <th>11:00am - 8:00pm</th>
+                    </tr>
+                    <tr>
+                        <th>Thursday</th>
+                        <th>11:00am - 8:00pm</th>
+                    </tr>
+                    <tr>
+                        <th>Friday</th>
+                        <th>11:00am - 2:00am</th>
+                    </tr>
+                    <tr>
+                        <th>Saturday</th>
+                        <th>11:00am - 2:00am</th>
+                    </tr>
+
+
+                </table>
             </div>
 
         </section>
