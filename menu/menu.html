@@ -2,11 +2,10 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name = 'viewport' content="width=device-width, initial-scale=1">
         <title>Taco 'Bout It</title>
         <link rel="stylesheet" href="../styles.css">
         <style>
-        .menu{
+        /* .menu{
             display: flex;
             width: 100%;
             text-align: center;
@@ -30,6 +29,19 @@
         }
         .pic{
             width: 50%;
+        } */
+        .flex-box {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+        .half {
+            width: 50%;
+            text-align: center;
+        }
+        .half-image {
+            width: 50%;
+            object-fit: cover;
         }
         </style>
     </head>
@@ -47,43 +59,36 @@
             <a href="../awards/awards.html">Awards</a>
         </nav>
         <h2 class = "title">Our Signature Tacos</h2>
-        <div class = "menu">
-            <div class = "item">
-                <h3>The Classic</h3>
+        <div class="flex-box">
+            <div class="half">
+                <h3 style="padding-top: 100px">The Classic</h3>
                 A soft shell taco with chicken. <br/> Topped with lettuce, salsa, avocado and cheese.
             </div>
-            <div class = "pic">
-                <img title="The Classic" height=300 src="https://images.unsplash.com/photo-1611699363784-f48a38b41a78?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTAxfHx0YWNvfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
-            </div>
+            <img title="The Classic" class="half-image" height="300" src="https://images.unsplash.com/photo-1611699363784-f48a38b41a78?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTAxfHx0YWNvfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
         </div>
-        <div class = "menu">
-            <div class = "pic">
-                <img title="The Hipster" height=300 src="https://images.unsplash.com/photo-1611699363790-2ec2d9b81d34?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTl8fHRhY298ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
-            </div>
-            <div class = "item">
-                <h3>The Hipster</h3>
+        <div class="flex-box">
+            <img title="The Hipster" class="half-image" height="300" src="https://images.unsplash.com/photo-1611699363790-2ec2d9b81d34?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTl8fHRhY298ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
+            <div class="half">
+                <h3 style="padding-top: 100px">The Hipster</h3>
                 A hard shell taco with pulled pork. <br/>Topped with guacamole, mango salsa and roasted garlic crema.
             </div>
         </div>
-        <div class = "menu">
-            <div class = "item">
-                <h3>The Vegan</h3>
+        <div class="flex-box">
+            <div class="half">
+                <h3 style="padding-top: 100px">The Vegan</h3>
                 A soft shell taco with fried tofu. <br/> Topped with lettuce, tomato, salsa, avocado and cashew crema.
             </div>
-            <div class = "pic">
-                <img title="The Vegan" height=300 src="https://images.unsplash.com/photo-1611699363803-a14372762d2b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTAzfHx0YWNvfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
-            </div>
+            <img title="The Vegan" class="half-image" height="300" src="https://images.unsplash.com/photo-1611699363803-a14372762d2b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTAzfHx0YWNvfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
         </div>
-        <div class = "menu">
-            <div class = "pic">
-                <img id = "bottom" title="Tacos" width=300 src="https://images.unsplash.com/photo-1607891715106-ba61a2951650?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=735&q=80" />
-            </div>
-            <div class = "item">
-                <h3>Build Your Own Taco</h3>
+        <div class="flex-box">
+            <img id = "bottom" class="half-image" height="600" title="Tacos" width=300 src="https://images.unsplash.com/photo-1607891715106-ba61a2951650?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=735&q=80" />
+            <div class="half">
+                <h3 style="padding-top: 250px">Build Your Own Taco</h3>
                 Choose a hard or soft shell. <br/>
                 Your choice of chicken, pulled pork or tofu, and any of our fresh toppings: lettuce, tomato, cheese, guacamole, avocado, salsa, mango salsa, and roasted garlic crema.
             </div>
         </div>
+
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script language="javascript">
             $("nav a").hover(
