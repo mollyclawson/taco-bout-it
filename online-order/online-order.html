@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Taco 'Bout It</title>
-        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="styles.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <style>
             .errMsg{
@@ -14,6 +14,38 @@
             }
             #subh{
                 text-align: left;
+                margin-left: 15px;
+            }
+            #table{
+                margin-top: 35px;
+                margin-right:auto;
+                text-align: left;
+                line-height: 150%;
+                box-sizing: border-box;
+            }
+            #subtotal{
+                margin-top: 18px;
+            }
+            #first{
+                margin-top: 7px;
+            }
+            input[type=button]{
+                color: #5ca4a9;
+                background-color: #e6ebe0;
+                margin-top: 15px;
+                font-size: 20px;
+            }
+            form{
+                text-align: left;
+                margin-left: 15px;
+            }
+            input[type=text] {
+                background-color: #5ca4a9;
+                color: white;
+            }
+            select{
+                background-color: #5ca4a9;
+                color: white;
             }
         </style>
     </head>
@@ -70,6 +102,9 @@
                         lname.focus();
                         err = true;
                     }
+                }
+                // If there are no errors, then the order is printed.
+                if (err==false){
                     if (!isNaN(parseInt(costs[3].value))){
                         amount = (parseInt((costs[3].value)/menuItems[3].cost));
                         for(i = 0;i<amount;i++){
@@ -78,9 +113,6 @@
                     }else{
                         tacos[0] = -1;
                     }
-                }
-                // If there are no errors, then the order is printed.
-                if (err==false){
                     printOrder(tacos);
                 }
                 return !err;
@@ -89,17 +121,17 @@
         </script>
         <h2 id = "subh" class = "title" style="padding-top: 190px">Online ordering is available for pick-up only!</h2>
         <form name = "form" method = "post" >
-        <p>First Name: <input type="text"  name='fname' /></p>
+        <p>First Name: <input type="text"  name='fname' id="first"/></p>
         <p>Last Name*:  <input type="text"  name='lname' /></p>
         <div id="errName" class="errMsg">Last name is required</div>
         <p>Phone*: <input type="text"  name='phone' /></p>
         <div id="errPhone" class="errMsg">Cell Phone number required with correct formatting</div>
         <table border="0" cellpadding="3" id = "table">
           <tr>
-            <th>Select Item</th>
-            <th>Tacos</th>
-            <th>Cost Each</th>
-            <th>Total Cost</th>
+            <th class="space">Select Item</th>
+            <th class="space">Tacos</th>
+            <th class="space">Cost Each</th>
+            <th class="space">Total Cost</th>
           </tr>
           <script language="javascript">
             var s = "";
@@ -130,14 +162,14 @@
                     number = parseFloat(costs[i].value);
                     if (!isNaN(number)){
                         number = parseInt(number / parseFloat(menuItems[i].cost));
-                        string += (number +" "+ menuItems[i].name + "\r\n");
+                        string += (menuItems[i].name + ": " + number + "\r\n");
                     }
                 }
                 if (tacos[0]!=-1){
-                    string += (amount + " BYO tacos \r\n");
+                    string += ("BYO Tacos: " + amount + " \r\n");
                     amount = (parseInt((costs[3].value)/menuItems[3].cost))
                     for (i=0; i< amount; i++){
-                        string += ("Taco " + (i+1) + " " + tacos[i] + "\r\n");
+                        string += ("Taco " + (i+1) + ": " + tacos[i] + "\r\n");
                     }
                 }
                 string += ("\r\nThe total is: $" + document.form.total.value + "\r\n");
@@ -148,7 +180,7 @@
         </table>
         <div id="errOrder" class="errMsg">Must order at least one item</div>
         <p>Subtotal: 
-           $<input type="text"  name='subtotal' id="subtotal" />
+           $ <input type="text"  name='subtotal' id="subtotal" />
         </p>
         <p>Mass tax 6.25%:
           $ <input type="text"  name='tax' id="tax" />
@@ -156,7 +188,7 @@
         <p>Total: $ <input type="text"  name='total' id="total" />
         </p>
 
-        <input type = "button" value = "Submit Order" onclick = "return validate()"/>
+        <input type = "button" id = "submit" value = "Submit Order" onclick = "return validate()"/>
         <script language="javascript">
         // When the document is ready, this will run if the food selection form is changed.
         $(document).ready(function(){
