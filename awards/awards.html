@@ -4,6 +4,35 @@
         <meta charset="UTF-8">
         <title>Taco 'Bout It</title>
         <link rel="stylesheet" href="../styles.css">
+        <style media="screen">
+            .subtitle{
+                font-size: 36px;
+            }
+            .award-box {
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+            }
+            .award-img {
+                height: 300px;
+                width: 100%;
+                object-fit: cover;
+                align-items: center;
+            }
+            .award-text {
+                width: 100%;
+                text-align: center;
+                font-size: 40px;
+            }
+            h2.award-text {
+                font-size:30px;
+                margin: 0px;
+            }
+            p.award-text {
+                font-size:auto;
+                margin: 0px;
+            }
+        </style>
     </head>
     <body>
         <div id="header">
@@ -19,8 +48,31 @@
             <a href="../awards/awards.html">Awards</a>
         </nav>
 
-        <div class= "title">
-            Awards page here
+        <div id= "container" style="padding-top: 190px">
+            <h2 class="subtitle">Our Awards and Honors</h2>
+            <div class="award-box">
+                <!-- <img src="../images/indoor-dining.jpg" class="award-img"> -->
+                <a data-flickr-embed="true" href="https://www.flickr.com/photos/artvlive/7282186496" title="Guy Fieri"><img src="https://live.staticflickr.com/8148/7282186496_146b56fe13_5k.jpg" class="award-img" alt="Guy Fieri"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                <div>
+                    <h2 class="award-text">Guy Fieri award for excellence</h2>
+                    <br><p class="award-text">In recognition of our excellence in the field of dining and diving.</p>
+                </div>
+            </div>
+            <div class="award-box">
+                <img src="../images/nobel-prize.png" class="award-img" style="width:40%">
+                <div>
+                    <h2 class="award-text">Nobel Peace Prize</h2>
+                    <br><p class="award-text">For our efforts in promoting world peace through tacos and taco related philanthropy</p>
+                </div>
+            </div>
+            <!-- <div class="award-box">
+                <img src="../images/indoor-dining.jpg" class="award-img">
+                <a data-flickr-embed="true" href="https://www.flickr.com/photos/artvlive/7282186496" title="Guy Fieri"><img src="https://live.staticflickr.com/8148/7282186496_146b56fe13_5k.jpg" class="award-img" alt="Guy Fieri"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                <div>
+                    <h2 class="award-text">Guy Fieri award for excellence</h2>
+                    <br><p class="award-text">yeee</p>
+                </div>
+            </div> -->
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script language="javascript">
