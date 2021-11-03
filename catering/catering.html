@@ -8,13 +8,23 @@
         <link rel="stylesheet" href="../styles.css">
     </head>
     <style>
-    html { 
-      background: url("../images/tent.jpg") no-repeat center center fixed; 
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
+        .image {
+                background-image: url("../images/tent.jpg");
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .welcome {
+                padding-top: 300px;
+                font-size: 64px;
+            } 
+            h3 {
+                font-size: 24px;
+                font-style: none;
+                color: #5ca4a9;
+                width: 25%;
+            }
     </style>
     <body>
         <div id="header">
@@ -29,17 +39,13 @@
             <a href="../about-us/about-us.html">About Us</a>
             <a href="../awards/awards.html">Awards</a>
         </nav>
-        <div>
-            <br>
-            <br>
-            <style>
-            .second {
-                text-align:center;
-                font-style: italic;
-                colr:#F660AB;
-            </style>
-            <h2 class="second">Catering Page</h2>
-        </div>
+        <section style="padding-top:190px">
+            <div class="image">
+                <h2 class="welcome">Welcome to Taco 'Bout It!</h2> 
+                <p class="sub-subtitle"> Mexican Kitchen | Taco Truck </p>
+            </div>
+
+        </section>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script language="javascript">
             $("nav a").hover(
